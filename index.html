@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Table with Search and Sort</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    th.sortable {
+      cursor: pointer;
+    }
+
+    th.sorted-asc::after {
+      content: " ↑";
+    }
+
+    th.sorted-desc::after {
+      content: " ↓";
+    }
+  </style>
+</head>
+<body>
+  <h1>Data Table with Search and Sort</h1>
+
+  <input type="text" id="searchInput" placeholder="Search for data">
+
+  <table id="dataTable">
+    <link rel="stylesheet" href="style.css">
+    <thead class="header">
+      <tr>
+        <th class="sortable" data-column="0">Name <button>sort</button></th>
+        <th class="sortable" data-column="1">profession <button>sort</button></th>
+        <th class="sortable" data-column="2">place of birth<button>sort</button></th>
+        <th class="sortable" data-column="3">zip kod <button>sort</button></th>
+        <th class="sortable" data-column="4">Starting a career<button>sort</button></th>
+        <th class="sortable" data-column="4">salary<button>sort</button></th>
+      </tr>
+    </thead>
+    <tbody id="dataBody">
+      <!-- Data rows will be added here using JavaScript -->
+    </tbody>
+  </table>
+  
+
+  <script src="app.js"></script>
+</body>
+</html>
